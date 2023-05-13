@@ -1,0 +1,717 @@
+.logo-img {
+  width: 118px;
+  height: 118px;
+  border-radius: 160px;
+}
+.logo-big img {
+  width: 278px;
+  height: 278px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: #00a6a6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+  font-family: "Ubuntu";
+  font-size: 19px;
+  line-height: normal;
+  font-weight: 700;
+  transition: background-color 0.2s linear;
+}
+.btn:hover {
+  background-color: #007575;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.social-item {
+  width: 30px;
+  height: 30px;
+}
+.social-link {
+  cursor: pointer;
+}
+
+.tel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+  font-family: "Ubuntu";
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: white;
+}
+.tel span {
+  width: 18px;
+  height: 18px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.menu-link {
+  background-color: rgba(54, 71, 98, 0.58);
+  padding: 14px 22px;
+  font-family: "Ubuntu";
+  font-size: 19px;
+  line-height: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.menu-link:hover {
+  background-color: rgba(2, 32, 74, 0.8);
+}
+
+.header {
+  width: 100%;
+  padding: 9px 0;
+  background-color: rgba(0, 38, 94, 0.76);
+  filter: blur(0.5px);
+  position: fixed;
+  z-index: 9999;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.first {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/first-img-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 873px;
+}
+.first-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 111px;
+}
+.first .menu {
+  margin-bottom: 40px;
+}
+.first .logo {
+  margin-bottom: 20px;
+}
+.first-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  max-width: 435px;
+}
+.first-title {
+  font-family: "Inter";
+  font-size: 55px;
+  line-height: normal;
+  font-weight: 700;
+  width: 100%;
+  color: white;
+}
+.first-text {
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  color: white;
+}
+
+.advantages {
+  width: 100%;
+  position: absolute;
+  top: -168px;
+  z-index: 100;
+}
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px 20px;
+  flex-wrap: wrap;
+}
+.advantages-item {
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.advantages-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid #02204a;
+}
+.advantages-item__img-block {
+  max-width: 360px;
+  width: 100%;
+  height: 360px;
+}
+.advantages-item__text {
+  font-family: "Inter";
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 270px;
+}
+
+.whyWe {
+  width: 100%;
+  padding-bottom: 100px;
+  background-image: url(../images/whyWe/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.whyWe-wrapper {
+  position: relative;
+}
+.whyWe-block {
+  padding-top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.whyWe-title {
+  font-family: "Inter";
+  font-size: 48px;
+  line-height: normal;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.whyWe-title span {
+  width: 71px;
+  height: 12px;
+  background-color: black;
+  display: inline-block;
+}
+.whyWe-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.whyWe-item {
+  max-width: 495px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.whyWe-item__img-block {
+  max-width: 90px;
+  max-height: 90px;
+  width: 100%;
+  height: 100%;
+}
+.whyWe-item__text {
+  width: 100%;
+  font-family: "Inter";
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.training {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/training/training_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 165px 0;
+}
+.training-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.training-title {
+  font-family: "Ubuntu";
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  widows: 100%;
+}
+.training-title_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  max-width: 715px;
+  width: 100%;
+}
+.training-title_sub {
+  font-family: "Ubuntu";
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}
+.training-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.training-item {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #8a8a8a 0%, #6a6a6a 100%);
+}
+.training-item__top {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.training-item__center {
+  width: 100%;
+  position: relative;
+  background-color: #181818;
+}
+.training-item__center::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../images/training/item-top_bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -29px;
+}
+.training-item__bottom {
+  width: 100%;
+  background-image: url(../images/training/item-bottom_bg.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.training-item__title {
+  font-family: "Inter";
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+.training-item__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  width: 100%;
+  padding: 0 40px;
+}
+.training-item__info-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.training-item__info-title {
+  font-family: "Inter";
+  font-size: 10px;
+  line-height: normal;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+.training-item__info-text {
+  font-family: "Inter";
+  font-size: 13px;
+  line-height: normal;
+  font-weight: 600;
+  color: white;
+}
+.training-item__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4.5px;
+  width: 100%;
+  padding: 0 20px;
+}
+.training-item__item {
+  width: 100%;
+}
+.training-item__item-text {
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 300;
+  color: white;
+  text-align: justify;
+}
+.training-item__item-text span {
+  font-weight: 700;
+}
+.training-btn {
+  padding: 11.5px 28px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 17px;
+  line-height: normal;
+  font-weight: 300;
+  color: #ffffff;
+  background: linear-gradient(90deg, #02204a 0%, #02204a 100%);
+  box-shadow: 2px 2px 3px rgba(2, 2, 2, 0.26);
+  z-index: 100;
+  transition: all 0.2s linear;
+}
+.training-btn:hover {
+  background: linear-gradient(90deg, #001431 0%, #003988 100%);
+}
+
+.coaching {
+  width: 100%;
+  padding: 50px 0;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/coaching/coaching_bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coaching-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 35px;
+}
+.coaching-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 34px;
+  line-height: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
+.coaching-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+.coaching-item {
+  max-width: 320px;
+  width: 100%;
+  padding: 7px;
+  background-color: #02204a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.coaching-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.coaching-item__img-block {
+  width: 100%;
+  height: 260px;
+}
+.coaching-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.coaching-item__title {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+}
+.coaching-item__text {
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  text-align: justify;
+  color: white;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reviews {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/reviews/reviews-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 100%;
+}
+.reviews-title {
+  font-family: "Inter";
+  font-size: 48px;
+  line-height: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.reviews-title span {
+  width: 71px;
+  height: 12px;
+  background-color: white;
+  display: inline-block;
+}
+
+.faq {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/faq/faq-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+.faq-wrapper {
+  width: 100%;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+.faq-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.faq-item[open] .faq-item__title {
+  margin-bottom: 7px;
+}
+.faq-item[open] .faq-item__title::before {
+  background: url(../images/arrow_hide.svg);
+}
+.faq-item[open] .faq-item__text {
+  margin-bottom: 12px;
+}
+.faq-item__title {
+  width: 100%;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  padding: 14px 40px 14px 20px;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 600;
+  color: #222;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.faq-item__title::before {
+  content: "";
+  width: 20px;
+  height: 12px;
+  background: url(../images/arrow_show.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.faq-item__title::marker {
+  font-size: 0;
+}
+.faq-item__text {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 400;
+  color: black;
+  text-align: justify;
+  width: 100%;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.footer {
+  width: 100%;
+  background: rgba(0, 38, 94, 0.76);
+  filter: blur(0.5px);
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-item {
+  font-family: "Inter";
+  font-size: 15px;
+  line-height: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footer-tel {
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  color: white;
+}
+.footer-privacyPolicy {
+  font-family: "Inter";
+  font-size: 15px;
+  line-height: normal;
+  font-weight: 400;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

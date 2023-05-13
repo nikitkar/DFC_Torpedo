@@ -1,0 +1,755 @@
+@import "./mixin.scss";
+
+.logo {
+  &-img {
+    width: 118px;
+    height: 118px;
+    border-radius: 160px;
+  }
+
+  &-big {
+    & img {
+      width: 278px;
+      height: 278px;
+    }
+  }
+}
+
+.btn {
+  padding: 5px 10px;
+
+  border-radius: 12px;
+
+  background-color: #00a6a6;
+
+  @include displayFlex(center, center, column);
+
+  text-align: center;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+
+  @include font(19px, 700, "Ubuntu");
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: #007575;
+  }
+}
+
+.social {
+  &-list {
+    @include displayFlex(center, center);
+    gap: 16px;
+  }
+
+  &-item {
+    width: 30px;
+    height: 30px;
+  }
+
+  &-link {
+    cursor: pointer;
+  }
+}
+
+.tel {
+  @include displayFlex(flex-start, flex-start);
+  gap: 7px;
+
+  @include font(20px, 700, "Ubuntu");
+  letter-spacing: -0.03em;
+
+  color: white;
+
+  & span {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.menu {
+  @include displayFlex(center, center);
+
+  &-link {
+    background-color: rgba(54, 71, 98, 0.58);
+    padding: 14px 22px;
+
+    @include font(19px, 500, "Ubuntu");
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: rgba(2, 32, 74, 0.8);
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 9px 0;
+
+  background-color: rgba(0, 38, 94, 0.76);
+  filter: blur(0.5px);
+
+  position: fixed;
+  z-index: 9999;
+
+  &-wrapper {
+    @include displayFlex(center, space-between);
+    gap: 40px;
+
+    width: 100%;
+  }
+
+  &-right {
+    @include displayFlex(center, flex-end);
+    gap: 20px;
+  }
+}
+
+.first {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../images/first-img-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 873px;
+
+  &-wrapper {
+    @include displayFlex(center, flex-start, column);
+    width: 100%;
+
+    padding-top: 111px;
+  }
+
+  & .menu {
+    margin-bottom: 40px;
+  }
+
+  & .logo {
+    margin-bottom: 20px;
+  }
+
+  &-content {
+    @include displayFlex(center, flex-start, column);
+    gap: 24px;
+
+    max-width: 435px;
+  }
+
+  &-title {
+    @include font(55px, 700, "Inter");
+    width: 100%;
+
+    color: white;
+  }
+
+  &-text {
+    @include font(20px, 500, "Inter");
+
+    text-align: center;
+    text-transform: uppercase;
+
+    width: 100%;
+
+    color: white;
+  }
+}
+
+.advantages {
+  width: 100%;
+
+  position: absolute;
+  top: -168px;
+
+  z-index: 100;
+
+  &-list {
+    @include displayFlex(flex-start, center);
+    gap: 30px 20px;
+
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    max-width: 360px;
+    width: 100%;
+
+    @include displayFlex(center, flex-start, column);
+    gap: 15px;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+      border: 7px solid #02204a;
+
+      &-block {
+        max-width: 360px;
+        width: 100%;
+        height: 360px;
+      }
+    }
+
+    &__text {
+      @include font(25px, 700, "Inter");
+      color: black;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      max-width: 270px;
+    }
+  }
+}
+
+.whyWe {
+  width: 100%;
+
+  padding-bottom: 100px;
+
+  background-image: url(../images/whyWe/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-block {
+    padding-top: 350px;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 50px;
+  }
+
+  &-title {
+    @include font(48px, 700, "Inter");
+    color: black;
+    text-transform: uppercase;
+
+    @include displayFlex(center, flex-start);
+    gap: 15px;
+
+    & span {
+      width: 71px;
+      height: 12px;
+
+      background-color: black;
+
+      display: inline-block;
+    }
+  }
+
+  &-list {
+    @include displayFlex(center, center);
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    max-width: 495px;
+    width: 100%;
+
+    @include displayFlex(center, center, column);
+    gap: 10px;
+
+    &__img-block {
+      max-width: 90px;
+      max-height: 90px;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &__text {
+      width: 100%;
+
+      @include font(25px, 700, "Inter");
+      text-align: center;
+      text-transform: uppercase;
+
+      color: black;
+    }
+  }
+}
+
+.training {
+  width: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../images/training/training_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 165px 0;
+
+  &-wrapper {
+    @include displayFlex(center, center, column);
+    gap: 60px;
+  }
+
+  &-title {
+    @include font(36px, 700, "Ubuntu");
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: white;
+
+    widows: 100%;
+
+    &_block {
+      @include displayFlex(center, center, column);
+      gap: 17px;
+
+      max-width: 715px;
+      width: 100%;
+    }
+
+    &_sub {
+      @include font(25px, 300, "Ubuntu");
+
+      text-align: center;
+
+      color: white;
+    }
+  }
+
+  &-list {
+    width: 100%;
+
+    @include displayFlex(center, center);
+    gap: 30px;
+
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    max-width: 350px;
+    width: 100%;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #8a8a8a 0%, #6a6a6a 100%);
+
+    &__top {
+      padding-top: 25px;
+      padding-bottom: 35px;
+
+      @include displayFlex(center, center, column);
+      gap: 10px;
+
+      width: 100%;
+    }
+
+    &__center {
+      width: 100%;
+
+      position: relative;
+
+      background-color: #181818;
+
+      &::after {
+        content: "";
+
+        width: 100%;
+        height: 30px;
+
+        background-image: url(../images/training/item-top_bg.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        position: absolute;
+        top: -29px;
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+
+      background-image: url(../images/training/item-bottom_bg.jpg);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      padding: 22px 0;
+
+      @include displayFlex(center, center, column);
+    }
+
+    &__title {
+      @include font(25px, 600, "Inter");
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: white;
+    }
+
+    &__info {
+      @include displayFlex(center, center, column);
+      gap: 1px;
+
+      width: 100%;
+      padding: 0 40px;
+
+      &-block {
+        @include displayFlex(center, center);
+      }
+      &-title {
+        @include font(10px, 300, "Inter");
+        color: white;
+
+        text-transform: uppercase;
+      }
+      &-text {
+        @include font(13px, 600, "Inter");
+        color: white;
+      }
+    }
+
+    &__list {
+      @include displayFlex(center, flex-start, column);
+      gap: 4.5px;
+
+      width: 100%;
+
+      padding: 0 20px;
+    }
+
+    &__item {
+      width: 100%;
+
+      &-text {
+        @include font(12px, 300, "Inter");
+        color: white;
+
+        text-align: justify;
+
+        & span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    padding: 11.5px 28px;
+
+    border-radius: 10px;
+
+    @include displayFlex(center, center, column);
+    @include font(17px, 300, "Inter");
+
+    color: #ffffff;
+
+    background: linear-gradient(90deg, #02204a 0%, #02204a 100%);
+    box-shadow: 2px 2px 3px rgba(2, 2, 2, 0.26);
+
+    z-index: 100;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: linear-gradient(90deg, #001431 0%, #003988 100%);
+    }
+  }
+}
+
+.coaching {
+  width: 100%;
+
+  padding: 50px 0;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(../images/coaching/coaching_bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-wrapper {
+    width: 100%;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 35px;
+  }
+
+  &-title {
+    width: 100%;
+
+    text-align: center;
+
+    @include font(34px, 700, "Inter");
+
+    text-transform: uppercase;
+
+    color: black;
+  }
+
+  &-list {
+    @include displayFlex(center, center);
+    gap: 50px;
+
+    width: 100%;
+  }
+
+  &-item {
+    max-width: 320px;
+    width: 100%;
+
+    padding: 7px;
+
+    background-color: #02204a;
+
+    @include displayFlex(center, center, column);
+    gap: 10px;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      &-block {
+        width: 100%;
+        height: 260px;
+      }
+    }
+
+    &__content {
+      @include displayFlex(center, center, column);
+      gap: 10px;
+
+      width: 100%;
+    }
+
+    &__title {
+      @include font(18px, 700, "Inter");
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: white;
+
+      width: 100%;
+    }
+
+    &__text {
+      @include font(14px, 400, "Inter");
+
+      text-align: justify;
+
+      color: white;
+
+      width: 100%;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+.reviews {
+  width: 100%;
+
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../images/reviews/reviews-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-wrapper {
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 80px;
+
+    width: 100%;
+  }
+
+  &-title {
+    @include font(48px, 700, "Inter");
+    text-transform: uppercase;
+
+    color: white;
+
+    @include displayFlex(center, flex-start);
+    gap: 15px;
+
+    & span {
+      width: 71px;
+      height: 12px;
+
+      background-color: white;
+
+      display: inline-block;
+    }
+  }
+}
+
+.faq {
+  width: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/faq/faq-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 55px;
+  padding-bottom: 60px;
+
+  &-wrapper {
+    width: 100%;
+  }
+
+  &-list {
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 10px;
+
+    width: 100%;
+  }
+
+  &-item {
+    width: 100%;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 7px;
+
+    &[open] &__title {
+      margin-bottom: 7px;
+
+      &::before {
+        background: url(../images/arrow_hide.svg);
+      }
+    }
+
+    &[open] &__text {
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      width: 100%;
+
+      cursor: pointer;
+
+      background-color: white;
+
+      border-radius: 4px;
+
+      padding: 14px 40px 14px 20px;
+
+      @include font(18px, 600, "Inter");
+      color: #222;
+
+      text-transform: uppercase;
+
+      position: relative;
+
+      @include displayFlex(flex-start, flex-start);
+
+      &::before {
+        content: "";
+
+        width: 20px;
+        height: 12px;
+
+        background: url(../images/arrow_show.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transition: 0.4s;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+      }
+
+      &::marker {
+        font-size: 0;
+      }
+    }
+
+    &__text {
+      @include font(18px, 400, "Inter");
+      color: black;
+
+      text-align: justify;
+
+      width: 100%;
+      background-color: #e2e2e2;
+      border-radius: 4px;
+      padding: 20px;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+
+  background: rgba(0, 38, 94, 0.76);
+  filter: blur(0.5px);
+
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &-wrapper {
+    @include displayFlex(center, space-between);
+    gap: 30px;
+
+    width: 100%;
+  }
+
+  &-list {
+    @include displayFlex(center, center);
+    gap: 16px;
+  }
+
+  &-item {
+    @include font(15px, 400, "Inter");
+    color: white;
+
+    text-transform: uppercase;
+  }
+
+  &-right {
+    @include displayFlex(flex-end, space-between, column);
+    gap: 40px;
+  }
+
+  &-tel {
+    @include font(20px, 600, "Inter");
+    color: white;
+  }
+
+  &-privacyPolicy {
+    @include font(15px, 400, "Inter");
+    color: white;
+  }
+}
