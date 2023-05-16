@@ -37,6 +37,167 @@
   }
 }
 
+.body-hide {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 99999;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  &.show {
+    @include displayFlex(center, center, column);
+  }
+
+  &-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+
+      width: 20px;
+      height: 2px;
+
+      background-color: black;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: all linear 0.4s;
+    }
+
+    &::after {
+      rotate: 45deg;
+    }
+
+    &::before {
+      rotate: -45deg;
+      left: 0.2px;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      &::after {
+        rotate: 135deg;
+        left: 0.2px;
+        top: 45%;
+      }
+
+      &::before {
+        rotate: 45deg;
+      }
+    }
+  }
+
+  &-body {
+    max-width: 550px;
+    width: 100%;
+
+    padding: 50px 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 15px;
+  }
+
+  &-content {
+    @include displayFlex(center, center, column);
+    gap: 15px;
+
+    width: 100%;
+  }
+
+  &-list {
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 10px;
+
+    width: 100%;
+  }
+
+  &-title {
+    @include font(22px, 700, "Inter");
+    color: black;
+
+    text-align: center;
+
+    width: 100%;
+  }
+
+  &-label {
+    @include font(16px, 400, "Inter");
+    color: black;
+  }
+
+  &-input {
+    width: 100%;
+
+    padding: 4px 5px;
+
+    border-radius: 5px;
+    border: 1px solid black;
+
+    @include font(18px, 500, "Inter");
+    color: black;
+
+    &_box {
+      @include displayFlex(flex-start, flex-start, column);
+      gap: 3px;
+
+      width: 100%;
+    }
+  }
+
+  &-button {
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    background-color: #00a6a6;
+
+    @include displayFlex(center, center, column);
+
+    text-align: center;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+
+    margin-top: 20px;
+
+    @include font(22px, 700, "Ubuntu");
+
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: #007575;
+    }
+  }
+}
+
 .social {
   &-list {
     @include displayFlex(center, center);
@@ -607,6 +768,64 @@
       background-color: white;
 
       display: inline-block;
+    }
+  }
+
+  &-list {
+    width: 100%;
+  }
+
+  &-item {
+    max-width: 750px;
+    width: 100%;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 10px;
+
+    margin: 0 auto;
+
+    &_block {
+      width: 100%;
+
+      background-color: rgba(203, 203, 203, 0.71);
+      padding: 15px 20px 30px;
+
+      @include displayFlex(center, flex-start, column);
+      gap: 10px;
+    }
+
+    &__title {
+      @include font(25px, 600, "Inter");
+      color: black;
+      text-transform: uppercase;
+
+      &-block {
+        @include displayFlex(center, flex-start, column);
+
+        text-align: center;
+      }
+
+      &-sub {
+        @include font(16px, 400, "Inter");
+        color: black;
+
+        margin-top: -5px;
+      }
+    }
+
+    &__text {
+      @include font(20px, 400, "Inter");
+      color: black;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &__btn {
+      padding: 10px 22px;
+      font-size: 22px;
     }
   }
 }
