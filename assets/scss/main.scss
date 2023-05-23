@@ -1151,7 +1151,7 @@
       &::marker {
         font-size: 0;
       }
-      &::marker::-webkit-details-marker {
+      &::-webkit-details-marker {
         font-size: 0;
       }
     }
