@@ -1,5 +1,23 @@
 @import "./mixin.scss";
 
+.page {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.9);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  &-open {
+    display: block;
+  }
+}
+
 .logo {
   &-img {
     width: 118px;
@@ -39,6 +57,42 @@
 
 .body-hide {
   overflow: hidden;
+}
+
+.show-menu {
+  & .burger:before,
+  & .burger:after {
+    top: 50%;
+  }
+
+  & .burger span {
+    opacity: 0;
+  }
+
+  & .burger:before {
+    transform: rotate(45deg);
+  }
+
+  & .burger:after {
+    transform: rotate(-45deg);
+  }
+
+  & .menu_modile {
+    display: block;
+    transform: translateX(0);
+  }
+
+  & .header {
+    background: none;
+
+    &-wrapper {
+      height: 53.2px;
+    }
+
+    &-right {
+      display: none;
+    }
+  }
 }
 
 .modal {
@@ -173,6 +227,23 @@
     }
   }
 
+  &-error {
+    @include displayFlex(flex-start, flex-start);
+    gap: 5px;
+
+    width: 100%;
+
+    &__icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__text {
+      @include font(16px, 500, "Inter");
+      color: red;
+    }
+  }
+
   &-button {
     padding: 15px 30px;
 
@@ -202,6 +273,10 @@
   &-list {
     @include displayFlex(center, center);
     gap: 16px;
+
+    @media screen and (max-width: 865px) {
+      display: none;
+    }
   }
 
   &-item {
@@ -223,6 +298,10 @@
 
   color: white;
 
+  @media screen and (max-width: 865px) {
+    display: none;
+  }
+
   & span {
     width: 18px;
     height: 18px;
@@ -231,6 +310,14 @@
 
 .menu {
   @include displayFlex(center, center);
+
+  @media screen and (max-width: 865px) {
+    display: none;
+  }
+
+  &-item {
+    display: flex;
+  }
 
   &-link {
     background-color: rgba(54, 71, 98, 0.58);
@@ -246,9 +333,110 @@
 
     transition: background-color 0.2s linear;
 
-    &:hover {
-      background-color: rgba(2, 32, 74, 0.8);
+    @media screen and (max-width: 1100px) {
+      padding: 10px 14px;
+      font-size: 16px;
     }
+
+    &:hover {
+      background-color: rgba(2, 32, 74, 0.8) !important;
+    }
+  }
+
+  &_modile {
+    display: none;
+
+    width: 300px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(203, 203, 203, 0.71);
+
+    padding: 20px 30px;
+
+    transform: translateX(-1000%);
+    transition: transform 0.2s linear;
+    z-index: 99999;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 20px;
+
+    &-list {
+      @include displayFlex(flex-start, flex-start, column);
+
+      width: 100%;
+    }
+
+    & .menu-item {
+      width: 100%;
+    }
+
+    & .menu-link {
+      width: 100%;
+      background: none;
+    }
+
+    &-social {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    &-tel {
+      display: block;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0;
+  color: white;
+
+  position: absolute;
+  right: 0;
+  z-index: 10000000000;
+
+  @media screen and (max-width: 865px) {
+    display: block;
+  }
+
+  & span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s linear;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    transition: transform 0.2s linear;
+  }
+
+  &:before,
+  &:after,
+  & span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -257,7 +445,7 @@
   padding: 9px 0;
 
   background-color: rgba(0, 38, 94, 0.76);
-  filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
 
   position: fixed;
   z-index: 9999;
@@ -267,6 +455,8 @@
     gap: 40px;
 
     width: 100%;
+
+    position: relative;
   }
 
   &-right {
@@ -312,6 +502,7 @@
     width: 100%;
 
     color: white;
+    text-align: center;
   }
 
   &-text {
@@ -333,6 +524,11 @@
   top: -168px;
 
   z-index: 100;
+
+  @media screen and (max-width: 1160px) {
+    position: relative;
+    top: 0;
+  }
 
   &-list {
     @include displayFlex(flex-start, center);
@@ -386,8 +582,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media screen and (max-width: 1160px) {
+    padding: 0;
+  }
+
   &-wrapper {
     position: relative;
+
+    @media screen and (max-width: 1160px) {
+      padding: 130px 0;
+    }
+
+    @media screen and (max-width: 950px) {
+      padding: 60px 0;
+    }
   }
 
   &-block {
@@ -395,6 +603,10 @@
 
     @include displayFlex(flex-start, flex-start, column);
     gap: 50px;
+
+    @media screen and (max-width: 1160px) {
+      padding-top: 100px;
+    }
   }
 
   &-title {
@@ -445,6 +657,10 @@
       text-transform: uppercase;
 
       color: black;
+
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -459,6 +675,10 @@
   background-size: cover;
 
   padding: 165px 0;
+
+  @media screen and (max-width: 950px) {
+    padding: 60px 0;
+  }
 
   &-wrapper {
     @include displayFlex(center, center, column);
@@ -489,6 +709,10 @@
       text-align: center;
 
       color: white;
+
+      @media screen and (max-width: 450px) {
+        font-size: 19px;
+      }
     }
   }
 
@@ -673,6 +897,12 @@
     gap: 50px;
 
     width: 100%;
+
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 950px) {
+      // padding: 60px 0;
+    }
   }
 
   &-item {
@@ -783,6 +1013,14 @@
     gap: 10px;
 
     margin: 0 auto;
+
+    @media screen and (max-width: 950px) {
+      max-width: 550px;
+    }
+
+    @media screen and (max-width: 750px) {
+      max-width: 360px;
+    }
 
     &_block {
       width: 100%;
@@ -942,12 +1180,20 @@
     @include displayFlex(center, space-between);
     gap: 30px;
 
+    flex-wrap: wrap;
+
     width: 100%;
+
+    @media screen and (max-width: 850px) {
+      justify-content: center;
+    }
   }
 
   &-list {
     @include displayFlex(center, center);
     gap: 16px;
+
+    flex-wrap: wrap;
   }
 
   &-item {
@@ -960,6 +1206,11 @@
   &-right {
     @include displayFlex(flex-end, space-between, column);
     gap: 40px;
+
+    @media screen and (max-width: 850px) {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &-tel {
